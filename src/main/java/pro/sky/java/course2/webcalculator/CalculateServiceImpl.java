@@ -28,7 +28,7 @@ public class CalculateServiceImpl implements CalculateService {
     @Override
     public int divide(int num1, int num2) {
         if (num2 == 0) {
-            System.out.println("На 0 делить нельзя");
+            throw new IllegalArgumentException();
         }
         return num1/num2;
     }

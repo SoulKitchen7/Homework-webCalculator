@@ -22,5 +22,17 @@ public class CalculateController {
     public int plus(@RequestParam ("num1") int num1, @RequestParam ("num2") int num2) {
         return calculateService.plus(num1, num2);
     }
+    @GetMapping("/minus")
+    public int minus (@RequestParam ("num1") int num1, @RequestParam ("num2") int num2) {
+        return calculateService.minus(num1, num2);
+    }
+    @GetMapping("/multiply")
+    public int multiply (@RequestParam ("num1") int num1, @RequestParam ("num2") int num2) {
+        return calculateService.multiply(num1, num2);
+    }
+    @GetMapping("/divide")
+    public int divide (@RequestParam ("num1") int num1, @RequestParam ("num2") int num2) {
+        return calculateService.divide(num1, num2);
+    }
 
 }
